@@ -81,16 +81,17 @@ Page({
   },
 
   genVerifyCode: function () {
+    //获得索引值-手机号-前缀
     var index = this.data.countryCodeIndex;
     var countryCode = this.data.countryCodes[index];
     var phoneNum = this.data.phoneNum;
-    console.log(phoneNum)
+    console.log(index+"--"+phoneNum+"--"+countryCode)
     wx.request({
       //小程序访问的网络请求协议必须是https，url里面不能有端口号
-      url: "http://localhost:8888/user/genCode",
+      url: "http://localhost:8154/user/genCode",
       data: {
-        nationCode: countryCode,
-        phoneNum: phoneNum
+        "nationCode": countryCode,
+        "phoneNum": phoneNum
       },
       method: 'GET',
       success: function (res) {

@@ -1,7 +1,7 @@
 {
   "pages":[
-    "pages/register/register",
     "pages/index/index",
+    "pages/register/register",
     "pages/logs/logs"
   ],
   "window":{

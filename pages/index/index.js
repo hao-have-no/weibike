@@ -1,4 +1,3 @@
-//index.js
 Page({
   data: {
     lng:0,//记录当前的经纬度
@@ -147,7 +146,7 @@ Page({
                 url: 'http://127.0.0.1:8154/addBike',
                 data:{
                   longitude:log,
-                  latitude:lat
+                  latitude:lat,
                 },
                 method:"POST",
                 success:function(res){
